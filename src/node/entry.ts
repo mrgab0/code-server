@@ -174,6 +174,8 @@ const main = async (args: Args, cliArgs: Args, configArgs: Args): Promise<void> 
   })
 
   logger.info(`code-server ${version} ${commit}`)
+  logger.info(`Using config file ${humanPath(args.config)}`)
+
   const serverAddress = await httpServer.listen()
   logger.info(`HTTP server listening on ${serverAddress}`)
 
